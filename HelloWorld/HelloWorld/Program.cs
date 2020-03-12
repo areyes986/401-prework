@@ -472,7 +472,7 @@ namespace HelloWorld
 }
 
 
-// NOTES
+////////////////// NOTES ///////////////////
 int a = 7;
 int b = 4;
 int c = 3;
@@ -484,5 +484,23 @@ Console.WriteLine($"remainder: {e}");
 
 int max = int.MaxValue;
 int min = int.MinValue;
+int what = max + 3;
 Console.WriteLine($"The range of integers is {min} to {max}");
-// Output: The range of integers is -2147483648 to 2147483647
+Console.WriteLine($"An example of overflow: {what}");
+    // Output: The range of integers is -2147483648 to 2147483647
+    // Output: An example of overflow: -2147483646
+
+    // The double numeric type represents a double-precision floating point number.
+    // A floating point number is useful to represent non-integral numbers that may be very large or small in magnitude.
+    // ouble-precision means that these numbers are stored using greater precision than single-precision. 
+
+    double max = double.MaxValue;
+double min = double.MinValue;
+Console.WriteLine($"The range of double is {min} to {max}");
+
+    //The decimal type has a smaller range but greater precision than double
+    //fixed point means that the decimal point (or binary point) doesn't move.
+    //The M suffix on the numbers is how you indicate that a constant should use the decimal type.
+    decimal min = decimal.MinValue;
+decimal max = decimal.MaxValue;
+Console.WriteLine($"The range of the decimal type is {min} to {max}");
